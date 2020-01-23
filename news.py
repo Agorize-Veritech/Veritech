@@ -47,12 +47,13 @@ def summarizer (text):
     summary = ' '.join(summary_sentences)
     return summary
 
+query = "hamilton"
 #Gets news articles for a given search query
 for i in range(1):
-    all_articles = newsapi.get_everything(q='bitcoin',
+    all_articles = newsapi.get_everything(q=query,
                                           sources='bbc-news,the-verge',
                                           domains='bbc.co.uk,techcrunch.com',
-                                          from_param='2019-12-20',
+                                          from_param='2020-01-10',
                                           to=date,
                                           language='en',
                                           sort_by='relevancy',
